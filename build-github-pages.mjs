@@ -6,11 +6,16 @@ export const BASE_PATH = '/equinorix-design';
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 const sourceRoot = path.join(projectRoot, 'site-copy');
 const outputRoot = path.join(projectRoot, 'pages-dist');
+// Each deployed commit refreshes all imported styles, scripts, and media together.
+const assetVersion = process.env.GITHUB_SHA || 'local';
 
 export function prefixRootUrl(value) {
   if (!value.startsWith('/') || value.startsWith('//')) return value;
-  if (value === BASE_PATH || value.startsWith(BASE_PATH + '/') || value.startsWith(BASE_PATH + '?') || value.startsWith(BASE_PATH + '#')) return value;
-  return BASE_PATH + value;
+  const prefixed = value === BASE_PATH || value.startsWith(BASE_PATH + '/') || value.startsWith(BASE_PATH + '?') || value.startsWith(BASE_PATH + '#') ? value : BASE_PATH + value;
+  if (!prefixed.startsWith(BASE_PATH + '/assets/') && !prefixed.startsWith(BASE_PATH + '/favicon.ico')) return prefixed;
+  const url = new URL(prefixed, 'https://pages.invalid');
+  url.searchParams.set('v', assetVersion);
+  return url.pathname + url.search + url.hash;
 }
 
 export function rewriteHtml(html) {

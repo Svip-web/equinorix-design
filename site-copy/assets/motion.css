@@ -1,0 +1,44 @@
+/* Content is visible by default; JavaScript enables motion only when supported. */
+html.motion-enabled .motion-reveal {
+  transition: opacity 500ms ease, transform 500ms cubic-bezier(.2, .65, .3, 1);
+  transition-delay: var(--motion-delay, 0ms);
+}
+
+html.motion-enabled .motion-reveal:not(.is-revealed) {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  will-change: opacity, transform;
+}
+
+html.motion-enabled .motion-reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+html.motion-enabled .motion-reveal:focus-within {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+html.motion-enabled .about__jpg img.motion-parallax {
+  transform: translate3d(0, var(--parallax-shift, 0px), 0) scale(1.08);
+  transform-origin: center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion-enabled .motion-reveal,
+  html.motion-enabled .motion-reveal:not(.is-revealed),
+  html.motion-enabled .motion-reveal.is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+
+  html.motion-enabled .about__jpg img.motion-parallax {
+    transform: none !important;
+    will-change: auto;
+  }
+}

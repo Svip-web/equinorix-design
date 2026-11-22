@@ -20,3 +20,10 @@ Logo, about.jpg, form.jpg and favicon.ico were retained from the existing EQUINO
 
 Original hero backgrounds
 first.jpg (1512 x 1002) and first-mob.jpg (390 x 844) are retained from the existing client site as reference assets; they are not the active hero backgrounds.
+
+WhatsApp brand icon
+Font Awesome Free 6.7.2 by Fonticons, Inc., copyright 2024.
+Official source: https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/whatsapp.svg
+License: Icons licensed under CC BY 4.0; https://fontawesome.com/license/free
+The canonical SVG path and original license comment are retained in build-local.mjs.
+Presentation attributes only: fill=currentColor, aria-hidden=true, focusable=false. The existing 24 x 24 CSS size and WhatsApp link label are unchanged.

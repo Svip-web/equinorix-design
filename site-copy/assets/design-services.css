@@ -1,6 +1,6 @@
 /* Preserve the original asymmetric service composition in the design edition. */
 .services {
-  padding: 96px 0;
+  padding: 96px 0 0;
   background: #fff;
 }
 
@@ -236,7 +236,7 @@
 
 @media (max-width: 767px) {
   .services {
-    padding: 56px 0;
+    padding: 56px 0 0;
   }
 
   .services .services__block::before {
