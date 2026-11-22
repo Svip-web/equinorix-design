@@ -5,9 +5,18 @@
 }
 
 .about .about__jpg {
+  position: relative;
   margin: 0;
   overflow: hidden;
   border-radius: 8px;
+}
+
+.about .about__jpg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, .16) 100%);
 }
 
 .about .about__jpg img {
