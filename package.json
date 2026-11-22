@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server-local.mjs",
     "build": "node build-local.mjs",
+    "build:pages": "node build-local.mjs && node build-github-pages.mjs",
     "check": "node --check site-copy/assets/app.js && node --check server-local.mjs && node check-local.mjs"
   }
 }

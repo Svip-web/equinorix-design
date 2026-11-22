@@ -8,6 +8,7 @@
 !/package.json
 !/START-LOCAL.cmd
 !/build-local.mjs
+!/build-github-pages.mjs
 !/original-content.mjs
 !/check-local.mjs
 !/content-data.json
@@ -19,6 +20,8 @@
 !/preview-mobile-footer.jpg
 !/site-copy/
 !/site-copy/**
+!/.github/
+!/.github/**
 
 # Credentials, logs, dependencies, and archives are never source assets.
 .env

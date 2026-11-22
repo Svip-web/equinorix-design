@@ -24,7 +24,7 @@
   max-width: 62ch;
   min-width: 0;
   margin: 0;
-  color: #566372;
+  color: #838181;
   font-size: 17px;
   line-height: 1.65;
 }
@@ -57,10 +57,10 @@
   min-height: 300px;
   height: auto;
   padding: 28px;
-  border: 1px solid #b8c3d0;
+  border: 1px solid #0e1115;
   border-radius: 16px;
   background: #fff;
-  color: #172743;
+  color: #0e1115;
   box-shadow: none;
   transform: none;
 }
@@ -82,7 +82,7 @@
   justify-content: center;
   min-width: 44px;
   padding: 7px 10px;
-  border: 1px solid #b8c3d0;
+  border: 1px solid #0e1115;
   border-radius: 8px;
   font-size: 18px;
   font-weight: 500;
@@ -92,7 +92,7 @@
 .services .services__item-title {
   min-height: 2.7em;
   margin: 24px 0 0;
-  color: #172743;
+  color: #0e1115;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.35;
@@ -102,7 +102,7 @@
 
 .services .services__item-text {
   margin: 14px 0 0;
-  color: #566372;
+  color: #0e1115;
   font-size: 16px;
   line-height: 1.6;
   overflow-wrap: break-word;
@@ -128,9 +128,9 @@
   height: auto;
   aspect-ratio: 1;
   padding: 20px;
-  border: 1px solid #172743;
+  border: 1px solid #1d2d65;
   border-radius: 50%;
-  background: #172743;
+  background: #1d2d65;
   color: #fff;
   font-size: 18px;
   line-height: 1.4;
@@ -141,8 +141,8 @@
 }
 
 .services .services__btn .btn_main:hover {
-  border-color: #253d5c;
-  background: #253d5c;
+  border-color: #0026ab;
+  background: #0026ab;
   box-shadow: none;
   transform: none;
 }
