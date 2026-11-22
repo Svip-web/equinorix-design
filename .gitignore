@@ -1,0 +1,30 @@
+# This workspace also contains private project evidence and host backups.
+# Track only the runnable website and the explicit publication allowlist.
+*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/ASSET-SOURCES.txt
+!/package.json
+!/START-LOCAL.cmd
+!/build-local.mjs
+!/original-content.mjs
+!/check-local.mjs
+!/content-data.json
+!/ui-data.json
+!/server-local.mjs
+!/download-font.mjs
+!/preview-desktop.jpg
+!/preview-mobile.jpg
+!/preview-mobile-footer.jpg
+!/site-copy/
+!/site-copy/**
+
+# Credentials, logs, dependencies, and archives are never source assets.
+.env
+.env.*
+*.key
+*.pem
+*.log
+*.zip
+node_modules/

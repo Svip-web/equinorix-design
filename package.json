@@ -1,0 +1,12 @@
+{
+  "name": "equinorix-design",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Separate EQUINORIX design preview based on baseline v20; email delivery disabled",
+  "scripts": {
+    "start": "node server-local.mjs",
+    "build": "node build-local.mjs",
+    "check": "node --check site-copy/assets/app.js && node --check server-local.mjs && node check-local.mjs"
+  }
+}

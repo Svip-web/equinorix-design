@@ -1,0 +1,22 @@
+EQUINORIX — asset sources
+
+Hero, video poster and demonstration video source photo
+Author: Simon Hermans
+Source: https://unsplash.com/photos/6tgHYmerKyM
+License: https://unsplash.com/license
+Original dimensions: 4761 × 2678 pixels.
+Included derivative: site-copy/assets/img/marbella-la-concha.webp, 3200 px wide.
+Credit: Photo by Simon Hermans on Unsplash.
+
+Font
+Manrope, Copyright 2018 The Manrope Project Authors.
+Source: https://github.com/googlefonts/manrope
+License: SIL Open Font License 1.1.
+Included license: site-copy/assets/fonts/OFL.txt.
+Font files are self-hosted; the site does not request Google Fonts at runtime.
+
+Existing brand assets
+Logo, about.jpg, form.jpg and favicon.ico were retained from the existing EQUINORIX site for this client project.
+
+Original hero backgrounds
+first.jpg (1512 x 1002) and first-mob.jpg (390 x 844) are retained from the existing client site as reference assets; they are not the active hero backgrounds.
