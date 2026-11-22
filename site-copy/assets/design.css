@@ -11,7 +11,7 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6}
 .btn_main:hover{background:#0026ab;transform:none;box-shadow:none}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #1d2d65;outline-offset:5px}
 br{display:none}
-.first{display:flex;align-items:center;min-height:100vh;min-height:100svh;padding:230px 0 92px;background-image:linear-gradient(180deg,rgba(13,25,52,0) 0%,rgba(13,25,52,.08) 18%,rgba(13,25,52,.42) 38%,rgba(13,25,52,.6) 62%,rgba(13,25,52,.44) 100%),url('/assets/img/marbella-la-concha.webp');background-position:center;background-size:cover}
+.first{display:flex;align-items:center;min-height:100vh;min-height:100svh;padding:230px 0 92px;background-image:linear-gradient(180deg,rgba(13,25,52,.22) 0%,rgba(13,25,52,.20) 18%,rgba(13,25,52,.42) 38%,rgba(13,25,52,.6) 62%,rgba(13,25,52,.44) 100%),url('/assets/img/marbella-la-concha.webp');background-position:center;background-size:cover}
 .first__content{max-width:790px;width:70%}
 .first__title{max-width:22ch;font-size:clamp(40px,4.1vw,62px);font-weight:500;line-height:1.08;letter-spacing:-.047em;color:#fff;text-wrap:balance}
 .first__text{max-width:47ch;margin-top:28px;font-size:18px;line-height:1.65;color:#fff}
@@ -63,7 +63,7 @@ dialog h2{font-weight:500;letter-spacing:-.03em;color:var(--ink)}
  :root{--section-space:56px}
  .title{font-size:32px;line-height:1.15}
  .text{font-size:16px;line-height:1.6}
- .first{padding:120px 0 70px;align-items:flex-start;background-position:58% center;background-image:linear-gradient(180deg,rgba(13,25,52,0) 0%,rgba(13,25,52,.08) 12%,rgba(13,25,52,.42) 25%,rgba(13,25,52,.6) 48%,rgba(13,25,52,.44) 100%),url('/assets/img/marbella-la-concha.webp')}
+ .first{padding:120px 0 70px;align-items:flex-start;background-position:58% center;background-image:linear-gradient(180deg,rgba(13,25,52,.22) 0%,rgba(13,25,52,.20) 12%,rgba(13,25,52,.42) 25%,rgba(13,25,52,.6) 48%,rgba(13,25,52,.44) 100%),url('/assets/img/marbella-la-concha.webp')}
  .first__content{width:100%;max-width:560px}
  .first__title{font-size:clamp(32px,7.5vw,42px);line-height:1.1;max-width:23ch;letter-spacing:-.04em}
  .first__text{margin-top:24px;font-size:16px;line-height:1.6;max-width:43ch}
