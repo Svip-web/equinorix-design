@@ -3,6 +3,7 @@
 
   const root = document.documentElement;
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const compactViewport = window.matchMedia('(max-width: 767px)');
   const records = new Map();
   const seen = new WeakSet();
   const groups = [
@@ -46,7 +47,9 @@
       const distance = viewportHeight / 2 - (rect.top + rect.height / 2);
       const range = (viewportHeight + rect.height) / 2;
       const progress = Math.max(-1, Math.min(1, distance / range));
-      const limit = Math.min(18, rect.height * .03);
+      const limit = compactViewport.matches
+        ? Math.min(28, rect.height * .06)
+        : Math.min(64, rect.height * .13);
       photo.style.setProperty('--parallax-shift', (progress * limit).toFixed(2) + 'px');
     });
   }

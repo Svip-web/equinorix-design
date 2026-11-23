@@ -1,0 +1,70 @@
+/* All desktop language choices are visible without opening a dropdown. */
+.header__language.pc {
+  width: auto;
+  height: auto;
+  flex: none;
+}
+
+.header__language.pc .header__language-main {
+  position: static;
+  width: auto;
+}
+
+.header__language.pc .language-options {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.header__language.pc .language-options li {
+  display: flex;
+  width: auto;
+  height: auto;
+  order: initial;
+  flex: none;
+}
+
+.header__language.pc .language-options li a,
+.header__language.pc .language-options li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: #0e1115;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.header__language.pc .language-options li span[aria-current="page"],
+.header__language.pc .language-options li a:hover {
+  color: #fff;
+  background: #1d2d65;
+  border-color: #1d2d65;
+}
+
+.header__language.pc .language-options li span[aria-current="page"] {
+  cursor: default;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__content { column-gap: 28px; }
+  .header__language.pc .language-options { gap: 6px; }
+  .header__language.pc .language-options li a,
+  .header__language.pc .language-options li span {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+}

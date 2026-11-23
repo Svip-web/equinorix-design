@@ -93,7 +93,8 @@ dialog h2{font-weight:500;letter-spacing:-.03em;color:var(--ink)}
 /* Restore the v20 header layout; contrast follows the hero/scroll state. */
 .header{background:transparent;border:0;backdrop-filter:none}
 .header:not(.is-scrolled):not(.header_active) .header__menu ul li a{color:#fff}
-.header:not(.is-scrolled):not(.header_active) .language-toggle{color:#fff;border-color:#fff}
+.header:not(.is-scrolled):not(.header_active) .language-options li a{color:#fff;border-color:#fff}
+.header:not(.is-scrolled):not(.header_active) .language-options li a:hover,.header:not(.is-scrolled):not(.header_active) .language-options li span[aria-current="page"]{color:#1d2d65;background:#fff;border-color:#fff}
 .header:not(.is-scrolled):not(.header_active) .header__logo img,.header:not(.is-scrolled):not(.header_active) .header__burger{filter:brightness(0) invert(1)}
 .header.is-scrolled{background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.09)}
 @media(min-width:768px) and (max-width:1419px){.first{padding-top:158px}}

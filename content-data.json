@@ -12,7 +12,8 @@
       { "title": "Reporting & Compliance", "text": "Preparation of financial documentation and compliance with local regulations" },
       { "title": "Company Formation", "text": "Support with company registration and business setup processes in Spain and Europe" },
       { "title": "Transaction Support", "text": "Assistance with documentation, due diligence and communication with partners and institutions" },
-      { "title": "Information Support & Advisory", "text": "Professional guidance for operational processes, documentation and business administration" }
+      { "title": "Information Support & Advisory", "text": "Professional guidance for operational processes, documentation and business administration" },
+      { "title": "Comprehensive Employment & HR Management", "text": "Complete employment management for companies, self-employed professionals, and household employers. We ensure full legal compliance and personalized support at every stage of the employment relationship." }
     ],
     "hrItems": [
       "Employee & self-employed registration",
@@ -55,7 +56,8 @@
       { "title": "Informes y Cumplimiento", "text": "Preparación de documentación financiera y cumplimiento de las normativas locales" },
       { "title": "Constitución de Empresas", "text": "Soporte en el registro de empresas y procesos de constitución en España y Europa" },
       { "title": "Soporte en Transacciones", "text": "Asistencia con la documentación, la diligencia debida y la comunicación con socios e instituciones" },
-      { "title": "Soporte Informativo y Asesoría", "text": "Orientación profesional para procesos operativos, documentación y administración de empresas" }
+      { "title": "Soporte Informativo y Asesoría", "text": "Orientación profesional para procesos operativos, documentación y administración de empresas" },
+      { "title": "Gestión Integral Laboral y de Recursos Humanos", "text": "Gestión laboral completa para empresas, profesionales autónomos y empleadores de personal doméstico. Garantizamos el pleno cumplimiento de la normativa y un asesoramiento personalizado en cada etapa de la relación laboral." }
     ],
     "hrItems": [
       "Alta de empleados y trabajadores autónomos",
@@ -98,7 +100,8 @@
       { "title": "Звітність і дотримання вимог", "text": "Підготовка фінансової документації та супровід дотримання місцевих вимог" },
       { "title": "Створення компаній", "text": "Підтримка реєстрації компаній і запуску бізнесу в Іспанії та Європі" },
       { "title": "Супровід угод", "text": "Допомога з документацією, комплексною перевіркою та комунікацією з партнерами й установами" },
-      { "title": "Інформаційна підтримка та поради", "text": "Фахові поради з операційних процесів, документації та управління бізнесом" }
+      { "title": "Інформаційна підтримка та поради", "text": "Фахові поради з операційних процесів, документації та управління бізнесом" },
+      { "title": "Комплексне управління трудовими відносинами та персоналом", "text": "Повний супровід трудових відносин для компаній, самозайнятих фахівців і роботодавців домашнього персоналу. Ми забезпечуємо повне дотримання законодавства та індивідуальну підтримку на кожному етапі трудових відносин." }
     ],
     "hrItems": [
       "Реєстрація працівників і самозайнятих осіб",
@@ -141,7 +144,8 @@
       { "title": "Отчётность и соблюдение норм", "text": "Подготовка финансовых документов и соблюдение местных норм" },
       { "title": "Создание компаний", "text": "Поддержка регистрации компаний и запуска бизнеса в Испании и Европе" },
       { "title": "Сопровождение сделок", "text": "Помощь с документами, комплексной проверкой и общением с партнёрами и учреждениями" },
-      { "title": "Информация и консультации", "text": "Профессиональные консультации по рабочим процессам, документам и управлению бизнесом" }
+      { "title": "Информация и консультации", "text": "Профессиональные консультации по рабочим процессам, документам и управлению бизнесом" },
+      { "title": "Комплексное управление трудовыми отношениями и персоналом", "text": "Полное сопровождение трудовых отношений для компаний, самозанятых специалистов и работодателей домашнего персонала. Мы обеспечиваем полное соблюдение законодательства и индивидуальную поддержку на каждом этапе трудовых отношений." }
     ],
     "hrItems": [
       "Регистрация работников и самозанятых лиц",

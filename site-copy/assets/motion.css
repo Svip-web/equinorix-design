@@ -22,9 +22,17 @@ html.motion-enabled .motion-reveal:focus-within {
 }
 
 html.motion-enabled .about__jpg img.motion-parallax {
-  transform: translate3d(0, var(--parallax-shift, 0px), 0) scale(1.08);
+  /* 15% overscan per edge covers 13% travel, including stale resize values. */
+  transform: translate3d(0, clamp(-13%, var(--parallax-shift, 0px), 13%), 0) scale(1.3);
   transform-origin: center;
   will-change: transform;
+}
+
+@media (max-width: 767px) {
+  html.motion-enabled .about__jpg img.motion-parallax {
+    /* 8% overscan per edge covers the gentler 6% mobile travel. */
+    transform: translate3d(0, clamp(-6%, var(--parallax-shift, 0px), 6%), 0) scale(1.16);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

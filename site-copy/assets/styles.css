@@ -1,6 +1,7 @@
 @import url('/assets/fonts/manrope.css');
 @import url('/assets/original.css');
 @import url('/assets/founder-video.css');
+@import url('/assets/languages.css');
 
 /* Technical fixes and changes explicitly required by the brief. */
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-offset,110px) + 12px)}
@@ -14,17 +15,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .header__burger{appearance:none;background-color:transparent}
 .header__logo img,.footer__logo img{height:auto}
 .header.is-scrolled{background:#f6f8fb}
-.header__language-main .language-toggle{display:flex;align-items:center;justify-content:center;width:54px;height:54px;font:inherit;font-size:20px;line-height:1;border:1px solid #0e1115;border-radius:50%;background:transparent;color:#0e1115}
-.header__language.pc .header__language-main{width:54px}
-.header__language.pc .language-toggle{gap:5px}
-.language-caret{display:block;width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg)}
-.header__language.pc .header__language-main.active .language-caret,.header__language.pc .header__language-main.active .language-offered{display:none}
-.header__language.pc .header__language-main.active .language-toggle::before{content:'×';font-size:28px;line-height:1}
-.header__language.pc .language-options{display:none;position:absolute;top:calc(100% + 12px);right:-8px;left:auto;width:max-content;padding:8px;margin:0;gap:8px;flex-direction:column;align-items:center;background:#f6f8fb;border:1px solid rgba(29,45,101,.25);border-radius:999px;box-shadow:0 6px 18px rgba(13,25,52,.12)}
-.header__language.pc .header__language-main.active .language-options{display:flex}
-.header__language.pc .language-options li{display:block;width:54px;height:54px;border:0;border-radius:50%;flex:none}
-.header__language.pc .language-options li a{display:flex;align-items:center;justify-content:center;width:54px;height:54px;padding:0;border:1px solid #1d2d65;border-radius:50%;font-size:20px;line-height:1;color:#1d2d65;white-space:nowrap;transition:background .15s,color .15s}
-.header__language.pc .language-options li a:hover,.header__language.pc .language-options li a:focus-visible{background:#1d2d65;color:#fff}
 /* Keep the approved photo; inherit the original hero presentation. */
 .first{min-height:100vh;min-height:100svh;background-image:linear-gradient(90deg,rgba(246,248,251,.7) 0%,rgba(246,248,251,.66) 38%,rgba(246,248,251,.5) 60%,rgba(246,248,251,.2) 82%,rgba(246,248,251,0) 100%),url('/assets/img/marbella-la-concha.webp')}
 .first__title{max-width:20em}

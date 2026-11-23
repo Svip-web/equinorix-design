@@ -3,6 +3,8 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 const root=path.join(path.dirname(fileURLToPath(import.meta.url)),'site-copy');
+const sourceData=JSON.parse(await fs.readFile(path.join(path.dirname(root),'content-data.json'),'utf8'));
+const escapeHtml=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const port=Number(process.env.EQUINORIX_PORT || 4177);
 const base=`http://127.0.0.1:${port}`;
 let checks=0;
@@ -13,7 +15,25 @@ for(const [language,route] of Object.entries({en:'/',es:'/es/',uk:'/uk/',ru:'/ru
   const localHtml=await fs.readFile(path.join(root,language==='en'?'':language,'index.html'),'utf8');
   assert.equal(html,localHtml,`${route}: server must serve this design copy`); checks++;
   assert.ok(html.includes(`<html lang="${language}"`));
-  assert.equal([...html.matchAll(/\bclass="([^"]*)"/g)].filter(match=>match[1].split(/\s+/).includes('services__item')).length,6);
+  assert.equal([...html.matchAll(/\bclass="([^"]*)"/g)].filter(match=>match[1].split(/\s+/).includes('services__item')).length,7);
+  const renderedServices=JSON.parse(html.match(/<script type="application\/json" id="page-data">([\s\S]*?)<\/script>/)[1]).t.services;
+  assert.equal(renderedServices.length,7);
+  assert.deepEqual(renderedServices,sourceData[language].services,`${route}: all seven services must match the current source`); checks++;
+  const seventhCard=[...html.matchAll(/<article class="services__item">([\s\S]*?)<\/article>/g)][6][1];
+  assert.match(seventhCard,/class="services__item-number"><span>07<\/span>/);
+  assert.ok(seventhCard.includes(escapeHtml(renderedServices[6].title)),`${route}: service 07 title`);
+  assert.ok(seventhCard.includes(escapeHtml(renderedServices[6].text)),`${route}: complete service 07 description`); checks++;
+  const desktopLanguages=html.match(/<nav class="header__language pc"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  assert.ok(desktopLanguages,route+': visible language navigation');
+  assert.equal((desktopLanguages.match(/<li\b/g)||[]).length,4);
+  assert.equal((desktopLanguages.match(/aria-current="page"/g)||[]).length,1);
+  assert.ok(!html.includes('js-language'),route+': no collapsed language toggle'); checks++;
+  const currentCode=language==='uk'?'UA':language.toUpperCase();
+  assert.match(desktopLanguages,new RegExp('aria-current="page"[^>]*>'+currentCode+'<'));
+  for(const [code,href] of Object.entries({en:'/',es:'/es/',uk:'/uk/',ru:'/ru/'})) {
+    if(code===language)continue;
+    assert.ok(desktopLanguages.includes('href="'+href+'" lang="'+code+'" hreflang="'+code+'" aria-label="'),route+': language link '+code); checks++;
+  }
   assert.ok(!html.includes('undefined'));
   const anchors=new Set([...html.matchAll(/id="([^"]+)"/g)].map(m=>m[1]));
   for(const match of html.matchAll(/(?:href|src)="([^"#]+|#[^"]+)"/g)) {
@@ -45,4 +65,4 @@ assert.deepEqual(await post.json(),{success:false,code:'EMAIL_NOT_CONFIGURED'});
 for(const route of ['/original/site/mail.php','/mail.php','/ftp-read.mjs','/%2e%2e%2foriginal/site/mail.php']) {
   assert.equal((await fetch(base+route)).status,404,route);checks++;
 }
-console.log(JSON.stringify({passed:true,checks,languages:4,serviceCardsPerPage:6,contactDelivery:'disabled for local preview',privateBackup:'not served'},null,2));
+console.log(JSON.stringify({passed:true,checks,languages:4,serviceCardsPerPage:7,contactDelivery:'disabled for local preview',privateBackup:'not served'},null,2));

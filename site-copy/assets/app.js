@@ -8,8 +8,6 @@
   const siteHeader = $('.header');
   const menuButton = $('.header__burger');
   const navigation = $('#site-navigation');
-  const languageButtons = [...document.querySelectorAll('.js-language.language-toggle')];
-  languageButtons.forEach(button => { button.dataset.initialAria = button.getAttribute('aria-label') || t.languageLabel; });
   let headerOffset = 0;
 
   function updateHeader() {
@@ -22,53 +20,25 @@
       document.documentElement.style.setProperty('--header-offset', headerOffset + 'px');
     }
   }
-  function closeLanguages(except) {
-    languageButtons.forEach(button => {
-      const menu = button.closest('.header__language-main');
-      if (menu === except) return;
-      menu?.classList.remove('active');
-      button.setAttribute('aria-expanded', 'false');
-      button.setAttribute('aria-label', button.dataset.initialAria);
-    });
-  }
   function closeMenu() {
     menuButton?.setAttribute('aria-expanded', 'false');
     siteHeader?.classList.remove('header_active');
-    closeLanguages();
     updateHeader();
   }
   menuButton?.addEventListener('click', () => {
     const expanded = menuButton.getAttribute('aria-expanded') !== 'true';
-    closeLanguages();
     menuButton.setAttribute('aria-expanded', String(expanded));
     siteHeader?.classList.toggle('header_active', expanded);
     updateHeader();
   });
-  languageButtons.forEach(button => button.addEventListener('click', () => {
-    const menu = button.closest('.header__language-main');
-    if (!menu) return;
-    const expanded = !menu.classList.contains('active');
-    closeLanguages(menu);
-    menu.classList.toggle('active', expanded);
-    button.setAttribute('aria-expanded', String(expanded));
-    button.setAttribute('aria-label', expanded ? u.close : button.dataset.initialAria);
-  }));
   document.addEventListener('pointerdown', event => {
-    languageButtons.forEach(button => {
-      if (!button.closest('.header__language-main')?.contains(event.target)) {
-        button.closest('.header__language-main')?.classList.remove('active');
-        button.setAttribute('aria-expanded', 'false');
-        button.setAttribute('aria-label', button.dataset.initialAria);
-      }
-    });
     if (siteHeader?.classList.contains('header_active') && !navigation?.contains(event.target) && !menuButton?.contains(event.target)) closeMenu();
   });
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
     const wasOpen = siteHeader?.classList.contains('header_active');
-    const languageButton = languageButtons.find(button => button.getAttribute('aria-expanded') === 'true');
     closeMenu();
-    if (wasOpen) menuButton?.focus(); else languageButton?.focus();
+    if (wasOpen) menuButton?.focus();
   });
   document.querySelectorAll('.header a').forEach(link => link.addEventListener('click', closeMenu));
   window.addEventListener('scroll', updateHeader, { passive: true });
