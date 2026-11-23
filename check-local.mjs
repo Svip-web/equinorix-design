@@ -35,6 +35,9 @@ for(const [language,route] of Object.entries({en:'/',es:'/es/',uk:'/uk/',ru:'/ru
     assert.ok(desktopLanguages.includes('href="'+href+'" lang="'+code+'" hreflang="'+code+'" aria-label="'),route+': language link '+code); checks++;
   }
   assert.ok(!html.includes('undefined'));
+  const hrIcons=[...html.matchAll(/<svg class="about__check"[^>]*>/g)].map(match=>match[0]);
+  assert.equal(hrIcons.length,8,`${route}: one check per HR item`);
+  assert.ok(hrIcons.every(icon=>icon.includes('aria-hidden="true"')&&icon.includes('focusable="false"')),`${route}: decorative checks must stay out of the accessibility tree`); checks++;
   const anchors=new Set([...html.matchAll(/id="([^"]+)"/g)].map(m=>m[1]));
   for(const match of html.matchAll(/(?:href|src)="([^"#]+|#[^"]+)"/g)) {
     const value=match[1];

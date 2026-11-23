@@ -1,0 +1,41 @@
+/* Shared type levels. Hero, navigation and UI controls keep their own roles. */
+:root {
+  --eq-section-title-size: clamp(30px, 3.3vw, 44px);
+  --eq-section-title-leading: 1.15;
+  --eq-service-title-size: 22px;
+  --eq-service-title-leading: 1.35;
+  --eq-body-size: 17px;
+  --eq-body-leading: 1.6;
+}
+
+.title,
+.services .services__title,
+.form .form__title,
+.form .form__success .title,
+.founder-message .founder-message__copy .title {
+  font-size: var(--eq-section-title-size);
+  line-height: var(--eq-section-title-leading);
+}
+
+.services .services__item-title {
+  font-size: var(--eq-service-title-size);
+  line-height: var(--eq-service-title-leading);
+}
+
+.services .services__text,
+.services .services__item-text,
+.form .form__text,
+.form .form__success .text,
+.founder-message .founder-message__intro,
+.about .about__list > ul > li,
+.footer .footer__text {
+  font-size: var(--eq-body-size);
+  line-height: var(--eq-body-leading);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --eq-section-title-size: 32px;
+    --eq-body-size: 16px;
+  }
+}

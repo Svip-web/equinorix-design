@@ -1,24 +1,7 @@
-/* Keep the first six cards intact; the full HR introduction follows them. */
-.services .services__list > .services__column:nth-child(7) {
-  flex: 0 0 100%;
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  grid-column: 1 / -1;
-  grid-row: 5;
-}
-
-.services .services__column:nth-child(7) .services__item {
-  height: auto;
-  min-height: 0;
-}
-
-.services .services__column:nth-child(7) .services__item-title {
-  min-height: 0;
-}
-
-@media (max-width: 1239px) {
-  .services .services__list > .services__column:nth-child(7) {
-    grid-row: auto;
-  }
+/* Service 07 follows 04–06 in the same responsive card grid. */
+@media (min-width: 1240px) {
+  .services .services__column:nth-child(4) { grid-column: 1; }
+  .services .services__column:nth-child(5) { grid-column: 2; }
+  .services .services__column:nth-child(6) { grid-column: 3; }
+  .services .services__column:nth-child(7) { grid-column: 4; grid-row: 4; }
 }

@@ -1,19 +1,40 @@
 {
   "en": {
-    "heroTitle": "Business consulting and accounting support for international clients in Spain and Europe",
+    "heroTitle": "Business consulting and accounting support for clients in Spain and Europe",
     "heroText": "We help companies make informed decisions, build transparent financial systems and operate in full compliance with local regulations",
     "cta": "Get in touch",
     "servicesTitle": "Our services",
     "servicesText": "Professional consulting services tailored to businesses across Europe",
     "servicesCta": "Let’s discuss your business",
     "services": [
-      { "title": "Business Consulting", "text": "Reliable solutions for business growth and financial management" },
-      { "title": "Accounting & Bookkeeping", "text": "Transparent financial management, reporting and day-to-day accounting support" },
-      { "title": "Reporting & Compliance", "text": "Preparation of financial documentation and compliance with local regulations" },
-      { "title": "Company Formation", "text": "Support with company registration and business setup processes in Spain and Europe" },
-      { "title": "Transaction Support", "text": "Assistance with documentation, due diligence and communication with partners and institutions" },
-      { "title": "Information Support & Advisory", "text": "Professional guidance for operational processes, documentation and business administration" },
-      { "title": "Comprehensive Employment & HR Management", "text": "Complete employment management for companies, self-employed professionals, and household employers. We ensure full legal compliance and personalized support at every stage of the employment relationship." }
+      {
+        "title": "Business Consulting",
+        "text": "Reliable solutions for business growth and financial management"
+      },
+      {
+        "title": "Accounting & Bookkeeping",
+        "text": "Transparent financial management, reporting and day-to-day accounting support"
+      },
+      {
+        "title": "Reporting & Compliance",
+        "text": "Preparation of financial documentation and compliance with local regulations"
+      },
+      {
+        "title": "Company Formation",
+        "text": "Support with company registration and business setup processes in Spain and Europe"
+      },
+      {
+        "title": "Transaction Support",
+        "text": "Assistance with documentation, due diligence and communication with partners and institutions"
+      },
+      {
+        "title": "Information Support & Advisory",
+        "text": "Professional guidance for operational processes, documentation and business administration"
+      },
+      {
+        "title": "Comprehensive Employment & HR Management",
+        "text": "Complete employment management for companies, self-employed professionals, and household employers. We ensure full legal compliance and personalized support at every stage of the employment relationship."
+      }
     ],
     "hrItems": [
       "Employee & self-employed registration",
@@ -27,14 +48,23 @@
     ],
     "contactTitle": "Let’s discuss your business needs",
     "contactText": "Leave your request and our team will contact you shortly",
-    "fields": { "name": "Full name", "company": "Company name", "email": "Email", "message": "Message" },
+    "fields": {
+      "name": "Full name",
+      "company": "Company name",
+      "email": "Email",
+      "message": "Message"
+    },
     "submit": "Get in touch",
     "sending": "Sending...",
     "successTitle": "Message sent!",
     "successText": "We’ll be in touch soon.",
     "returnForm": "Return to the form",
     "errorMessage": "Server error. Please try again later.",
-    "nav": { "home": "Home", "services": "Services", "contact": "Contact" },
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "contact": "Contact"
+    },
     "footerText": "Business consulting and financial support in Spain and Europe",
     "contacts": "Contacts:",
     "copyright": "© 2025 EQUINORIX SL. All rights reserved.",
@@ -51,13 +81,34 @@
     "servicesText": "Servicios de consultoría profesional adaptados a empresas en toda Europa",
     "servicesCta": "Hablemos de su negocio",
     "services": [
-      { "title": "Consultoría de Negocios", "text": "Soluciones fiables para el crecimiento empresarial y la gestión financiera" },
-      { "title": "Contabilidad y Teneduría de Libros", "text": "Gestión financiera transparente, informes y soporte contable diario" },
-      { "title": "Informes y Cumplimiento", "text": "Preparación de documentación financiera y cumplimiento de las normativas locales" },
-      { "title": "Constitución de Empresas", "text": "Soporte en el registro de empresas y procesos de constitución en España y Europa" },
-      { "title": "Soporte en Transacciones", "text": "Asistencia con la documentación, la diligencia debida y la comunicación con socios e instituciones" },
-      { "title": "Soporte Informativo y Asesoría", "text": "Orientación profesional para procesos operativos, documentación y administración de empresas" },
-      { "title": "Gestión Integral Laboral y de Recursos Humanos", "text": "Gestión laboral completa para empresas, profesionales autónomos y empleadores de personal doméstico. Garantizamos el pleno cumplimiento de la normativa y un asesoramiento personalizado en cada etapa de la relación laboral." }
+      {
+        "title": "Consultoría de Negocios",
+        "text": "Soluciones fiables para el crecimiento empresarial y la gestión financiera"
+      },
+      {
+        "title": "Contabilidad y Teneduría de Libros",
+        "text": "Gestión financiera transparente, informes y soporte contable diario"
+      },
+      {
+        "title": "Informes y Cumplimiento",
+        "text": "Preparación de documentación financiera y cumplimiento de las normativas locales"
+      },
+      {
+        "title": "Constitución de Empresas",
+        "text": "Soporte en el registro de empresas y procesos de constitución en España y Europa"
+      },
+      {
+        "title": "Soporte en Transacciones",
+        "text": "Asistencia con la documentación, la diligencia debida y la comunicación con socios e instituciones"
+      },
+      {
+        "title": "Soporte Informativo y Asesoría",
+        "text": "Orientación profesional para procesos operativos, documentación y administración de empresas"
+      },
+      {
+        "title": "Gestión Integral Laboral y de Recursos Humanos",
+        "text": "Gestión laboral completa para empresas, profesionales autónomos y empleadores de personal doméstico. Garantizamos el pleno cumplimiento de la normativa y un asesoramiento personalizado en cada etapa de la relación laboral."
+      }
     ],
     "hrItems": [
       "Alta de empleados y trabajadores autónomos",
@@ -71,14 +122,23 @@
     ],
     "contactTitle": "Hablemos de las necesidades de su negocio",
     "contactText": "Deje su solicitud y nuestro equipo se pondrá en contacto con usted a la brevedad",
-    "fields": { "name": "Nombre completo", "company": "Nombre de la empresa", "email": "Correo electrónico", "message": "Mensaje" },
+    "fields": {
+      "name": "Nombre completo",
+      "company": "Nombre de la empresa",
+      "email": "Correo electrónico",
+      "message": "Mensaje"
+    },
     "submit": "Contactar",
     "sending": "Enviando...",
     "successTitle": "¡Mensaje enviado!",
     "successText": "Nos pondremos en contacto contigo pronto.",
     "returnForm": "Volver al formulario",
     "errorMessage": "Error del servidor. Por favor, inténtelo más tarde.",
-    "nav": { "home": "Inicio", "services": "Servicios", "contact": "Contacto" },
+    "nav": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "contact": "Contacto"
+    },
     "footerText": "Consultoría de negocios y soporte financiero en España y Europa",
     "contacts": "Contactos:",
     "copyright": "© 2025 EQUINORIX SL. Todos los derechos reservados.",
@@ -95,13 +155,34 @@
     "servicesText": "Професійні консультаційні послуги для потреб бізнесу в Європі",
     "servicesCta": "Обговорімо ваш бізнес",
     "services": [
-      { "title": "Бізнес-консалтинг", "text": "Надійні рішення для розвитку бізнесу та управління фінансами" },
-      { "title": "Бухгалтерія та облік", "text": "Прозоре управління фінансами, звітність і щоденний бухгалтерський супровід" },
-      { "title": "Звітність і дотримання вимог", "text": "Підготовка фінансової документації та супровід дотримання місцевих вимог" },
-      { "title": "Створення компаній", "text": "Підтримка реєстрації компаній і запуску бізнесу в Іспанії та Європі" },
-      { "title": "Супровід угод", "text": "Допомога з документацією, комплексною перевіркою та комунікацією з партнерами й установами" },
-      { "title": "Інформаційна підтримка та поради", "text": "Фахові поради з операційних процесів, документації та управління бізнесом" },
-      { "title": "Комплексне управління трудовими відносинами та персоналом", "text": "Повний супровід трудових відносин для компаній, самозайнятих фахівців і роботодавців домашнього персоналу. Ми забезпечуємо повне дотримання законодавства та індивідуальну підтримку на кожному етапі трудових відносин." }
+      {
+        "title": "Бізнес-консалтинг",
+        "text": "Надійні рішення для розвитку бізнесу та управління фінансами"
+      },
+      {
+        "title": "Бухгалтерія та облік",
+        "text": "Прозоре управління фінансами, звітність і щоденний бухгалтерський супровід"
+      },
+      {
+        "title": "Звітність і дотримання вимог",
+        "text": "Підготовка фінансової документації та супровід дотримання місцевих вимог"
+      },
+      {
+        "title": "Створення компаній",
+        "text": "Підтримка реєстрації компаній і запуску бізнесу в Іспанії та Європі"
+      },
+      {
+        "title": "Супровід угод",
+        "text": "Допомога з документацією, комплексною перевіркою та комунікацією з партнерами й установами"
+      },
+      {
+        "title": "Інформаційна підтримка та поради",
+        "text": "Фахові поради з операційних процесів, документації та управління бізнесом"
+      },
+      {
+        "title": "Комплексне управління трудовими відносинами та персоналом",
+        "text": "Повний супровід трудових відносин для компаній, самозайнятих фахівців і роботодавців домашнього персоналу. Ми забезпечуємо повне дотримання законодавства та індивідуальну підтримку на кожному етапі трудових відносин."
+      }
     ],
     "hrItems": [
       "Реєстрація працівників і самозайнятих осіб",
@@ -115,14 +196,23 @@
     ],
     "contactTitle": "Обговорімо потреби вашого бізнесу",
     "contactText": "Залиште запит, і наша команда зв’яжеться з вами найближчим часом",
-    "fields": { "name": "Повне ім’я", "company": "Назва компанії", "email": "Електронна пошта", "message": "Повідомлення" },
+    "fields": {
+      "name": "Повне ім’я",
+      "company": "Назва компанії",
+      "email": "Електронна пошта",
+      "message": "Повідомлення"
+    },
     "submit": "Зв’язатися з нами",
     "sending": "Надсилання...",
     "successTitle": "Повідомлення надіслано!",
     "successText": "Ми зв’яжемося з вами найближчим часом.",
     "returnForm": "Повернутися до форми",
     "errorMessage": "Помилка сервера. Спробуйте ще раз пізніше.",
-    "nav": { "home": "Головна", "services": "Послуги", "contact": "Контакти" },
+    "nav": {
+      "home": "Головна",
+      "services": "Послуги",
+      "contact": "Контакти"
+    },
     "footerText": "Бізнес-консалтинг і фінансова підтримка в Іспанії та Європі",
     "contacts": "Контакти:",
     "copyright": "© 2025 EQUINORIX SL. Усі права захищено.",
@@ -139,13 +229,34 @@
     "servicesText": "Профессиональные консультационные услуги для потребностей бизнеса в Европе",
     "servicesCta": "Обсудим ваш бизнес",
     "services": [
-      { "title": "Бизнес-консалтинг", "text": "Надёжные решения для развития бизнеса и управления финансами" },
-      { "title": "Бухгалтерия и учёт", "text": "Прозрачное управление финансами, отчётность и повседневное бухгалтерское сопровождение" },
-      { "title": "Отчётность и соблюдение норм", "text": "Подготовка финансовых документов и соблюдение местных норм" },
-      { "title": "Создание компаний", "text": "Поддержка регистрации компаний и запуска бизнеса в Испании и Европе" },
-      { "title": "Сопровождение сделок", "text": "Помощь с документами, комплексной проверкой и общением с партнёрами и учреждениями" },
-      { "title": "Информация и консультации", "text": "Профессиональные консультации по рабочим процессам, документам и управлению бизнесом" },
-      { "title": "Комплексное управление трудовыми отношениями и персоналом", "text": "Полное сопровождение трудовых отношений для компаний, самозанятых специалистов и работодателей домашнего персонала. Мы обеспечиваем полное соблюдение законодательства и индивидуальную поддержку на каждом этапе трудовых отношений." }
+      {
+        "title": "Бизнес-консалтинг",
+        "text": "Надёжные решения для развития бизнеса и управления финансами"
+      },
+      {
+        "title": "Бухгалтерия и учёт",
+        "text": "Прозрачное управление финансами, отчётность и повседневное бухгалтерское сопровождение"
+      },
+      {
+        "title": "Отчётность и соблюдение норм",
+        "text": "Подготовка финансовых документов и соблюдение местных норм"
+      },
+      {
+        "title": "Создание компаний",
+        "text": "Поддержка регистрации компаний и запуска бизнеса в Испании и Европе"
+      },
+      {
+        "title": "Сопровождение сделок",
+        "text": "Помощь с документами, комплексной проверкой и общением с партнёрами и учреждениями"
+      },
+      {
+        "title": "Информация и консультации",
+        "text": "Профессиональные консультации по рабочим процессам, документам и управлению бизнесом"
+      },
+      {
+        "title": "Комплексное управление трудовыми отношениями и персоналом",
+        "text": "Полное сопровождение трудовых отношений для компаний, самозанятых специалистов и работодателей домашнего персонала. Мы обеспечиваем полное соблюдение законодательства и индивидуальную поддержку на каждом этапе трудовых отношений."
+      }
     ],
     "hrItems": [
       "Регистрация работников и самозанятых лиц",
@@ -159,14 +270,23 @@
     ],
     "contactTitle": "Обсудим потребности вашего бизнеса",
     "contactText": "Оставьте запрос, и наша команда свяжется с вами в ближайшее время",
-    "fields": { "name": "Полное имя", "company": "Название компании", "email": "Электронная почта", "message": "Сообщение" },
+    "fields": {
+      "name": "Полное имя",
+      "company": "Название компании",
+      "email": "Электронная почта",
+      "message": "Сообщение"
+    },
     "submit": "Связаться с нами",
     "sending": "Отправка...",
     "successTitle": "Сообщение отправлено!",
     "successText": "Мы свяжемся с вами в ближайшее время.",
     "returnForm": "Вернуться к форме",
     "errorMessage": "Ошибка сервера. Попробуйте ещё раз позже.",
-    "nav": { "home": "Главная", "services": "Услуги", "contact": "Контакты" },
+    "nav": {
+      "home": "Главная",
+      "services": "Услуги",
+      "contact": "Контакты"
+    },
     "footerText": "Бизнес-консалтинг и финансовая поддержка в Испании и Европе",
     "contacts": "Контакты:",
     "copyright": "© 2025 EQUINORIX SL. Все права защищены.",

@@ -1,11 +1,12 @@
 const lineBreaks = {
-  en: { heroTitle: [2, 5, 10], heroText: [9], firstServiceText: [2, 5], secondServiceTitle: [2], contactTitle: [3] },
+  en: { heroTitle: [2, 5, 9], heroText: [9], firstServiceText: [2, 5], secondServiceTitle: [2], contactTitle: [3] },
   es: { heroTitle: [3, 6, 13], heroText: [11], firstServiceText: [2, 8], secondServiceTitle: [2], contactTitle: [4], contactText: [8] },
   uk: { contactTitle: [2] },
   ru: { contactTitle: [2] },
 };
 
 const servicesArrow = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21.6533 21.6533L10.3467 10.3467" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.8667 21.6534H21.6533V14.8667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const hrCheckIcon = '<svg class="about__check" width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="#1D2D65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle class="about__check-circle" cx="21" cy="21" r="15" pathLength="1"/><path class="about__check-tick" d="M15 21L19 25L27 17" pathLength="1"/></svg>';
 
 /** Return the original four content sections; the caller owns main, header and footer. */
 export function renderOriginalMain(lang, t, u, escape) {
@@ -51,8 +52,8 @@ export function renderOriginalMain(lang, t, u, escape) {
     <div class="about__block">
       <div class="about__jpg"><img src="/assets/img/about.jpg" width="1352" height="467" loading="lazy" alt="${escape(u.hrTitleSr)}"></div>
       <div class="about__list">
-        <ul>${t.hrItems.slice(0, 4).map(item => `<li>${escape(item)}</li>`).join('')}</ul>
-        <ul>${t.hrItems.slice(4, 8).map(item => `<li>${escape(item)}</li>`).join('')}</ul>
+        <ul>${t.hrItems.slice(0, 4).map(item => `<li>${hrCheckIcon}${escape(item)}</li>`).join('')}</ul>
+        <ul>${t.hrItems.slice(4, 8).map(item => `<li>${hrCheckIcon}${escape(item)}</li>`).join('')}</ul>
       </div>
     </div>
   </div>

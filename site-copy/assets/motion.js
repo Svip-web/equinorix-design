@@ -6,6 +6,7 @@
   const compactViewport = window.matchMedia('(max-width: 767px)');
   const records = new Map();
   const seen = new WeakSet();
+  const drawnChecks = new WeakSet();
   const groups = [
     '.services__title, .services__text',
     '.services__item',
@@ -21,7 +22,10 @@
     });
   });
   const photos = [...document.querySelectorAll('.about__jpg > img')];
+  const checks = [...document.querySelectorAll('.about__list > ul > li')]
+    .filter(item => item.querySelector('.about__check'));
   let observer = null;
+  let checkObserver = null;
   let enabled = false;
   let frame = 0;
 
@@ -34,6 +38,12 @@
   function revealFocused(event) {
     const element = event.target?.closest?.('.motion-reveal');
     if (element) reveal(element);
+  }
+
+  function drawCheck(item) {
+    drawnChecks.add(item);
+    item.classList.add('is-check-drawn');
+    checkObserver?.unobserve(item);
   }
 
   function updateParallax() {
@@ -62,6 +72,8 @@
     enabled = false;
     observer?.disconnect();
     observer = null;
+    checkObserver?.disconnect();
+    checkObserver = null;
     if (frame) window.cancelAnimationFrame(frame);
     frame = 0;
     root.classList.remove('motion-enabled');
@@ -69,6 +81,11 @@
       seen.add(element);
       element.classList.remove('motion-reveal', 'is-revealed');
       element.style.removeProperty('--motion-delay');
+    });
+    checks.forEach(item => {
+      drawnChecks.add(item);
+      item.classList.remove('check-motion', 'is-check-drawn');
+      item.style.removeProperty('--check-delay');
     });
     photos.forEach(photo => {
       photo.classList.remove('motion-parallax');
@@ -96,6 +113,21 @@
       if (seen.has(element)) reveal(element);
       else observer.observe(element);
     });
+    const pendingChecks = checks.filter(item => !drawnChecks.has(item));
+    if (pendingChecks.length) {
+      checkObserver = new IntersectionObserver(entries => {
+        if (!enabled) return;
+        entries.forEach(entry => {
+          if (entry.isIntersecting) drawCheck(entry.target);
+        });
+      }, { threshold: .25, rootMargin: '0px 0px -16px 0px' });
+      pendingChecks.forEach(item => {
+        const row = [...item.parentElement.children].indexOf(item);
+        item.classList.add('check-motion');
+        item.style.setProperty('--check-delay', ((row % 4) * 70) + 'ms');
+        checkObserver.observe(item);
+      });
+    }
     photos.forEach(photo => {
       photo.classList.add('motion-parallax');
       photo.addEventListener('load', requestUpdate);
