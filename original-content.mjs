@@ -1,8 +1,6 @@
 const lineBreaks = {
-  en: { heroTitle: [2, 5, 9], heroText: [9], firstServiceText: [2, 5], secondServiceTitle: [2], contactTitle: [3] },
-  es: { heroTitle: [3, 6, 13], heroText: [11], firstServiceText: [2, 8], secondServiceTitle: [2], contactTitle: [4], contactText: [8] },
-  uk: { contactTitle: [2] },
-  ru: { contactTitle: [2] },
+  en: { firstServiceText: [2, 5] },
+  es: { firstServiceText: [2, 8], contactText: [8] },
 };
 
 const servicesArrow = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21.6533 21.6533L10.3467 10.3467" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.8667 21.6534H21.6533V14.8667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -21,8 +19,8 @@ export function renderOriginalMain(lang, t, u, escape) {
   <div class="container">
     <div class="first__block">
       <div class="first__content">
-        <h1 id="hero-title" class="first__title">${text(t.heroTitle, breaks.heroTitle)}</h1>
-        <div class="first__text">${text(t.heroText, breaks.heroText)}</div>
+        <h1 id="hero-title" class="first__title">${escape(t.heroTitle)}</h1>
+        <div class="first__text">${escape(t.heroText)}</div>
         <div class="first__btn"><a href="#contact" class="btn btn_main js-scroll" aria-label="${escape(t.cta)}">${escape(t.cta)}</a></div>
       </div>
     </div>
@@ -39,7 +37,7 @@ export function renderOriginalMain(lang, t, u, escape) {
         <div class="services__column">
           <article class="services__item">
             <div class="services__item-number"><span>${String(index + 1).padStart(2, '0')}</span></div>
-            <h3 class="services__item-title">${text(service.title, index === 1 ? breaks.secondServiceTitle : undefined)}</h3>
+            <h3 class="services__item-title">${escape(service.title)}</h3>
             <div class="services__item-text">${text(service.text, index === 0 ? breaks.firstServiceText : undefined)}</div>
           </article>
         </div>`).join('')}
@@ -75,7 +73,7 @@ export function renderOriginalMain(lang, t, u, escape) {
   <div class="container">
     <div class="form__block">
       <div class="form__column">
-        <h2 id="contact-title" class="form__title title">${text(t.contactTitle, breaks.contactTitle)}</h2>
+        <h2 id="contact-title" class="form__title title">${escape(t.contactTitle)}</h2>
         <div class="form__text text">${text(t.contactText, breaks.contactText)}</div>
         <form id="contact-form" class="form__main" action="/api/contact" method="post">
           <div id="form-fields">

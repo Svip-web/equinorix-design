@@ -1,3 +1,9 @@
+/* Natural line wrapping for every heading; no editorial hard breaks. */
+h1, h2, h3 { text-wrap: balance; }
+@media (min-width: 1024px) {
+  .first .first__content { width: 40%; max-width: none; }
+}
+
 /* Shared type levels. Hero, navigation and UI controls keep their own roles. */
 :root {
   --eq-section-title-size: clamp(30px, 3.3vw, 44px);
