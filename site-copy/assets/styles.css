@@ -92,3 +92,12 @@ dialog p,#policy-text{font-size:16px;line-height:1.5}
  .cookie-actions{flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Use the same gap on both sides of the HR photograph. */
+.services + .about{--hr-photo-gap:48px;padding-top:var(--hr-photo-gap)}
+.services + .about .about__jpg{margin-top:0}
+.services + .about .about__list{margin-top:calc(var(--hr-photo-gap) - 30px)}
+.services + .about .about__list > ul{padding-block:0}
+@media(max-width:767px){.services + .about{--hr-photo-gap:32px}}
+/* Retain the existing row padding; account for it in the visible photo gap. */
+@media(max-width:767px){.services + .about .about__list{margin-top:calc(var(--hr-photo-gap) - 25px)}}
